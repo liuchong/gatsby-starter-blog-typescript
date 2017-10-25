@@ -1,5 +1,9 @@
 * gatsby-starter-blog-typescript
 
+** Description
+
+The book.
+
 ** License
 
 [[LICENSE][MIT]]
