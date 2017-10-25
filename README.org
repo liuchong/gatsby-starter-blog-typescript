@@ -1,0 +1,5 @@
+* gatsby-starter-blog-typescript
+
+** License
+
+[[LICENSE][MIT]]
