@@ -1,0 +1,76 @@
+{
+  "private": true,
+  "name": "gatsby-starter-blog-typescript",
+  "version": "0.0.0",
+  "description": "Start to use gatsby to build a blog.",
+  "repository": "http://github.com/liuchong/gatsby-starter-blog-typescript",
+  "author": "Liu Chong <mail@clojure.cn>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint -p . --type-check",
+    "lint:css": "stylelint './src/**/*.tsx'",
+    "test": "jest --env=jsdom",
+    "start": "gatsby develop",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "preview": "yarn build && http-server public/ -o"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/enzyme": "3.1.1",
+    "@types/jest": "21.1.5",
+    "@types/node": "8.0.47",
+    "@types/react": "16.0.18",
+    "@types/react-dom": "16.0.2",
+    "enzyme": "3.1.0",
+    "enzyme-adapter-react-16": "1.0.2",
+    "gatsby": "latest",
+    "gatsby-link": "latest",
+    "gatsby-plugin-styled-components": "latest",
+    "gatsby-plugin-typescript": "latest",
+    "gatsby-plugin-typography": "latest",
+    "http-server": "^0.10.0",
+    "jest": "21.3.0-beta.2",
+    "styled-components": "^2.2.2",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.0.0",
+    "ts-jest": "21.1.3",
+    "tslint": "5.8.0",
+    "tslint-react": "3.2.0"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "verbose": true,
+    "setupFiles": [
+      "<rootDir>/scripts/jest/setupTests.js"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "tsconfig.test.json"
+      }
+    },
+    "transform": {
+      "^.+\\.css$": "<rootDir>/scripts/jest/cssTransform.js",
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+      "^(?!.*\\.(js|jsx|json)$)": "<rootDir>/scripts/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testPathIgnorePatterns": [
+      "/tmp",
+      "/.cache"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
+}
