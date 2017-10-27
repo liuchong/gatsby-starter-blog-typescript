@@ -17,6 +17,6 @@ describe('Index page', () => {
 
   it('has a correct header', () => {
     const app = enzyme.shallow(<App />)
-    expect(app.find('h1').text()).toBe('Gatsby starter blog typescript')
+    expect(app.find('h1').text()).toBe('gatsby starter blog typescript')
   })
 })
