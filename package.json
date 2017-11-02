@@ -14,7 +14,7 @@
     "start": "gatsby develop",
     "dev": "gatsby develop",
     "build": "gatsby build",
-    "preview": "yarn build && http-server public/ -o"
+    "preview": "yarn build && http-server public/"
   },
   "dependencies": {},
   "devDependencies": {
@@ -45,9 +45,9 @@
     "gatsby-link": "latest",
     "gatsby-plugin-catch-links": "^1.0.9",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-styled-components": "latest",
+    "gatsby-plugin-styled-components": "^1.0.5",
     "gatsby-plugin-typescript": "latest",
-    "gatsby-plugin-typography": "latest",
+    "gatsby-plugin-typography": "^1.7.10",
     "gatsby-source-filesystem": "^1.5.6",
     "gatsby-transformer-remark": "^1.7.19",
     "http-server": "^0.10.0",
@@ -63,7 +63,8 @@
     "ts-loader": "^3.1.0",
     "tslint": "5.8.0",
     "tslint-react": "3.2.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.5.3",
+    "typography-theme-lawton": "^0.15.10"
   },
   "jest": {
     "coverageDirectory": "./coverage/",

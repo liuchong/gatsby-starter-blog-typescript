@@ -1,18 +1,15 @@
-import * as React from 'react';
-import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
-
-// import '../css/index.css'; // add some style if you want!
+import * as React from 'react'
+import Link from 'gatsby-link'
 
 export default function Index({
   data
-}) {
-  const { edges: posts } = data.allMarkdownRemark;
+}: any) {
+  const { edges: posts } = data.allMarkdownRemark
   return (
     <div className="blog-posts">
       {posts
-        .filter(post => post.node.frontmatter.title.length > 0)
-        .map(({ node: post }) => {
+        .filter((post: any) => post.node.frontmatter.title.length > 0)
+        .map(({ node: post }: any) => {
           return (
             <div className="blog-post-preview" key={post.id}>
               <h1>
@@ -21,14 +18,14 @@ export default function Index({
               <h2>{post.frontmatter.date}</h2>
               <p>{post.excerpt}</p>
             </div>
-          );
+          )
         })}
     </div>
-  );
+  )
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query PostsQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
@@ -43,4 +40,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
